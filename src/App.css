@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+body {
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section1, .section2 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-basis: 100%;
+}
+
+.section1 {
+  flex: 1;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.section2 {
+  flex: 2;
+  height: 100vh;
+}
+
+.top {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.maplibregl-canvas-container {
+  height: 100vh;
+}
+
+.top input[type="text"] {
+  border: 1px solid #ddd;
+  padding: 0.4rem;
+}
+
+.top button {
+  border: 1px solid #ddd;
+  padding: 0.4rem;
+  border-radius: 2px;
+  font-weight: bold;
+  background: rgb(var(--hottheme-color-primary));
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  padding-left: .6rem;
+  border-bottom: 1px solid var(--hottheme-color-divider);
+  padding-bottom: 1.3rem;
 }
